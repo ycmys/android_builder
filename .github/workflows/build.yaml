@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: 1.8
       - id: get-project
-        name: Get project name
+        name: https://github.com/ycmys/TVBoxOSC
         run: echo "::set-output name=PROJECT::$(cat project-to-build)"
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
